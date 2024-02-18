@@ -26,7 +26,7 @@ const Homepage = () => {
               <div className="card border-0 bg-light shadow-sm pb-2">
                 <img
                   className="card-img-top mb-2"
-                  src="/img/className-1.jpg"
+                  src="/img/class-1.jpg"
                   alt=""
                 />
                 <div className="card-body text-center">
@@ -74,7 +74,7 @@ const Homepage = () => {
               <div className="card border-0 bg-light shadow-sm pb-2">
                 <img
                   className="card-img-top mb-2"
-                  src="/img/className-2.jpg"
+                  src="/img/class-2.jpg"
                   alt=""
                 />
                 <div className="card-body text-center">
@@ -122,7 +122,7 @@ const Homepage = () => {
               <div className="card border-0 bg-light shadow-sm pb-2">
                 <img
                   className="card-img-top mb-2"
-                  src="/img/className-3.jpg"
+                  src="/img/class-3.jpg"
                   alt=""
                 />
                 <div className="card-body text-center">

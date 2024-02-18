@@ -7,8 +7,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
           <Link
             href="/"
-            className="navbar-brand font-weight-bold text-secondary"
-            style={{ fontSize: "50px" }}
+            className="navbar-brand font-weight-bold text-secondary logo"
           >
             <i className="flaticon-043-teddy-bear"></i>
             <span className="text-main">Durga Model School</span>

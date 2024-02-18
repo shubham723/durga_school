@@ -9893,3 +9893,19 @@ a.text-dark:hover, a.text-dark:focus {
 .border-30 {
   border-radius: 30px !important;
 }
+
+.logo {
+  font-size: 50px !important;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .logo {
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .logo {
+    font-size: 20px !important;
+  }
+}
