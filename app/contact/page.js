@@ -1,8 +1,35 @@
+"use client";
 import Footer from "../components/Layout/footer";
 import Navbar from "../components/Layout/navbar";
 import Header from "../components/Layout/header";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import { Spinner } from "react-bootstrap";
+import axios from "axios";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    setLoading(true);
+    try {
+      await axios.post("/api/contact", data);
+      toast.success("Message sent! We'll be in touch shortly.");
+      reset();
+      setLoading(false);
+    } catch (error) {
+      toast.error("Something went wrong. Please try again later.");
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       <Navbar />
@@ -25,58 +52,85 @@ const Contact = () => {
                   name="sentMessage"
                   id="contactForm"
                   novalidate="novalidate"
+                  onSubmit={handleSubmit(onSubmit)}
                 >
-                  <div className="control-group">
+                  <div className="control-group mb-3">
                     <input
                       type="text"
                       className="form-control"
                       id="name"
+                      name="name"
                       placeholder="Your Name"
-                      required="required"
-                      data-validation-required-message="Please enter your name"
+                      // data-validation-required-message="Please enter your name"
+                      {...register("name", {
+                        required: "Name is required",
+                      })}
                     />
-                    <p className="help-block text-danger"></p>
+                    {errors.name && (
+                      <span className="error">{errors.name.message}</span>
+                    )}
                   </div>
-                  <div className="control-group">
+                  <div className="control-group mb-3">
                     <input
                       type="email"
                       className="form-control"
                       id="email"
                       placeholder="Your Email"
-                      required="required"
                       data-validation-required-message="Please enter your email"
+                      {...register("email", {
+                        required: "Email is required",
+                      })}
                     />
-                    <p className="help-block text-danger"></p>
+                    {errors.email && (
+                      <p className="help-block text-danger">
+                        {errors.email.message}
+                      </p>
+                    )}
                   </div>
-                  <div className="control-group">
+                  <div className="control-group mb-3">
                     <input
-                      type="text"
+                      type="number"
                       className="form-control"
-                      id="subject"
-                      placeholder="Subject"
-                      required="required"
-                      data-validation-required-message="Please enter a subject"
+                      id="mobileNumber"
+                      name="mobileNumber"
+                      placeholder="Mobile Number"
+                      data-validation-required-message="Please enter your mobile number"
+                      {...register("mobileNumber", {
+                        required: "Mobile Number is required",
+                      })}
                     />
-                    <p className="help-block text-danger"></p>
+                    {errors.mobileNumber && (
+                      <p className="help-block text-danger">
+                        {errors.mobileNumber.message}
+                      </p>
+                    )}
                   </div>
-                  <div className="control-group">
+                  <div className="control-group mb-2">
                     <textarea
                       className="form-control"
                       rows="6"
                       id="message"
+                      name="message"
                       placeholder="Message"
-                      required="required"
                       data-validation-required-message="Please enter your message"
+                      {...register("message", {
+                        required: "Message is required",
+                      })}
                     ></textarea>
-                    <p className="help-block text-danger"></p>
+                    {errors.message && (
+                      <p className="help-block text-danger">
+                        {errors.message.message}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <button
                       className="btn btn-primary py-2 px-4 border-30"
                       type="submit"
                       id="sendMessageButton"
+                      disabled={loading}
                     >
-                      Send Message
+                      {loading ? <Spinner animation="grow" /> : "Send Message"}
                     </button>
                   </div>
                 </form>
@@ -84,45 +138,44 @@ const Contact = () => {
             </div>
             <div className="col-lg-5 mb-5">
               <p>
-                Labore sea amet kasd diam justo amet ut vero justo. Ipsum ut et
-                kasd duo sit, ipsum sea et erat est dolore, magna ipsum et magna
-                elitr. Accusam accusam lorem magna, eos et sed eirmod dolor est
-                eirmod eirmod amet.
+                Reserve a place for your child in our dynamic learning
+                environment, where they can thrive and grow academically,
+                socially, and personally.
               </p>
               <div className="d-flex">
                 <i
                   className="fa fa-map-marker-alt d-inline-flex align-items-center justify-content-center bg-main text-sec rounded-circle"
-                  style= {{ width: "45px", height: "45px" }}
+                  style={{ width: "45px", height: "45px" }}
                 ></i>
                 <div className="pl-3">
                   <h5>Address</h5>
-                  <p>123 Street, Ludhiana, India</p>
+                  <p>New Shivpuri, Santokh Nagar, Ludhiana</p>
                 </div>
               </div>
               <div className="d-flex">
                 <i
                   className="fa fa-envelope d-inline-flex align-items-center justify-content-center bg-main text-secondary rounded-circle"
-                  style= {{ width: "45px", height: "45px" }}
+                  style={{ width: "45px", height: "45px" }}
                 ></i>
                 <div className="pl-3">
                   <h5>Email</h5>
-                  <p>info@example.com</p>
+                  <p>durgamodelschoolludhiana@gmail.com</p>
                 </div>
               </div>
               <div className="d-flex">
                 <i
                   className="fa fa-phone-alt d-inline-flex align-items-center justify-content-center bg-main text-secondary rounded-circle"
-                  style= {{ width: "45px", height: "45px" }}
+                  style={{ width: "45px", height: "45px" }}
                 ></i>
                 <div className="pl-3">
                   <h5>Phone</h5>
-                  <p>+91 345-67890</p>
+                  <p>+91 99889-99217</p>
                 </div>
               </div>
               <div className="d-flex">
                 <i
                   className="far fa-clock d-inline-flex align-items-center justify-content-center bg-main text-secondary rounded-circle"
-                  style= {{ width: "45px", height: "45px" }}
+                  style={{ width: "45px", height: "45px" }}
                 ></i>
                 <div className="pl-3">
                   <h5>Opening Hours</h5>

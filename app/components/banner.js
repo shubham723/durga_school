@@ -1,23 +1,26 @@
+import Link from "next/link";
+
 const Banner = () => {
   return (
     <div className="container-fluid bg-main px-0 px-md-5 mb-5">
-      <div className="row align-items-center px-3">
-        <div className="col-lg-6 text-center text-lg-left">
-          <h4 className="text-white mb-4 mt-5 mt-lg-0">Kids Learning Center</h4>
+      <div className="row align-items-center px-3 bannerImg">
+        <div className="col-lg-6 cold-md-12 text-center text-lg-left">
+          <h4 className="text-white mb-4 mt-5 mt-lg-0">Durga Model School Ludhiana</h4>
           <h1 className="display-3 font-weight-bold text-white">
             New Approach to Kids Education
           </h1>
           <p className="text-white mb-4">
-            Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed
-            sit. Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed
-            ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo
-            dolore.
+            Durga Model School is located in new Shivpuri, Ludhiana. The
+            school enrols children of 3+ in to Nursery. The school is affiliated
+            with the Punjab School Education Board (PSEB), Mohali and
+            prepares students for the Board’s All India Secondary School
+            Examination.
           </p>
-          <a href="" className="btn btn-sec mt-1 py-3 px-5 border-30">
+          <Link href="/about" className="btn btn-sec mt-1 py-3 px-5 border-30">
             Learn More
-          </a>
+          </Link>
         </div>
-        <div className="col-lg-6 text-center text-lg-right">
+        <div className="col-lg-6 col-md-12 text-center text-lg-right">
           <img className="img-fluid mt-5" src="img/header.png" alt="" />
         </div>
       </div>

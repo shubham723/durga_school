@@ -1,4 +1,3 @@
-
 import { BsFileMusic } from "react-icons/bs";
 import { SiSnapcraft } from "react-icons/si";
 import { FaBus } from "react-icons/fa";
@@ -22,8 +21,10 @@ const Facilites = () => {
               <div className="pl-4">
                 <h4>Play Ground</h4>
                 <p className="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
+                  We believe learning should be as fun as playtime. Our
+                  innovative approach combines structured education with
+                  hands-on experiences, fostering creativity, curiosity, and a
+                  love for learning.
                 </p>
               </div>
             </div>
@@ -38,10 +39,12 @@ const Facilites = () => {
               </div>
               {/* <i className="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i> */}
               <div className="pl-4">
-                <h4>Music and Dance</h4>
+                <h4>Personalized Education</h4>
                 <p className="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
+                  We understand that every student is unique, with individual
+                  strengths, interests, and learning styles. That's why we
+                  prioritize personalized education to reach their full
+                  potential.
                 </p>
               </div>
             </div>
@@ -55,15 +58,17 @@ const Facilites = () => {
                 <SiSnapcraft />
               </div>
               <div className="pl-4">
-                <h4>Arts and Crafts</h4>
+                <h4>Experienced Educators</h4>
                 <p className="m-0">
-                  Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                  lorem amet elitr vero...
+                  Our school is proud to boast a team of highly qualified and
+                  passionate educators who bring years of experience and
+                  expertise to the classroom, ensuring enriching learning for
+                  all students.
                 </p>
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 pb-1">
+          {/* <div className="col-lg-4 col-md-6 pb-1">
             <div
               className="d-flex bg-light shadow-sm border-top rounded mb-4"
               style={{ padding: "30px" }}
@@ -113,7 +118,7 @@ const Facilites = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ const Introduction = () => {
           <div className="col-lg-5">
             <img
               className="img-fluid rounded mb-5 mb-lg-0"
-              src="/img/about-1.jpg"
+              src="/img/student-2.jpeg"
               alt=""
             />
           </div>
@@ -16,32 +16,33 @@ const Introduction = () => {
             </p>
             <h1 className="mb-4">Best School For Your Kids</h1>
             <p>
-              Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo
-              dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo.
-              Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-              dolor
+              Aim of education should be to facilitate learning by crafting
+              learning experiences which brings out the unique potentials of an
+              individual. This one can do only if learning experiences one
+              creates are varied and focussed on different Domains of learning,
+              growth and development.
             </p>
             <div className="row pt-2 pb-4">
               <div className="col-6 col-md-4">
                 <img
                   className="img-fluid rounded"
-                  src="/img/about-2.jpg"
+                  src="/img/student-3.jpeg"
                   alt=""
                 />
               </div>
               <div className="col-6 col-md-8">
                 <ul className="list-inline m-0">
                   <li className="py-2 border-top border-bottom">
-                    <i className="fa fa-check text-primary mr-3"></i>Labore eos
-                    amet dolor amet diam
+                    <i className="fa fa-check text-primary mr-3"></i>
+                    Discover our school's rich history, values, and commitment to academic excellence.
                   </li>
                   <li className="py-2 border-bottom">
-                    <i className="fa fa-check text-primary mr-3"></i>Etsea et
-                    sit dolor amet ipsum
+                    <i className="fa fa-check text-primary mr-3"></i>
+                    Explore our diverse curriculum, extracurricular activities, and specialized programs tailored to student success.
                   </li>
                   <li className="py-2 border-bottom">
-                    <i className="fa fa-check text-primary mr-3"></i>Diam dolor
-                    diam elitripsum vero.
+                    <i className="fa fa-check text-primary mr-3"></i>
+                    Meet our dedicated team of educators and staff members, passionate about nurturing student potential.
                   </li>
                 </ul>
               </div>

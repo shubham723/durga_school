@@ -9909,3 +9909,35 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 20px !important;
   }
 }
+
+.error {
+  color: red;
+}
+
+.me-auto {
+  margin-right: auto;
+}
+
+.navLinks {
+  padding: 30px 15px !important;
+  color: #00394f !important;
+  outline: none !important;
+}
+
+.navLinks:hover {
+  color: #17a2b8 !important;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .navLinks {
+    padding: 10px 15px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bannerImg {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
