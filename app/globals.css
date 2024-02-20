@@ -9922,6 +9922,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 30px 15px !important;
   color: #00394f !important;
   outline: none !important;
+  font-size: 20px;
 }
 
 .navLinks:hover {
@@ -9943,6 +9944,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .logoImg {
-  height: 65px;
+  height: 100px;
   width: 65px;
 }

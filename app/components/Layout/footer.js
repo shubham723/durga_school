@@ -57,7 +57,7 @@ const Footer = () => {
             <h4 className="fa fa-map-marker-alt text-main"></h4>
             <div className="pl-3">
               <h5 className="text-white">Address</h5>
-              <p>New Shivpuri, Santokh Nagar, Ludhiana</p>
+              <p>Guru Ramdas Nagar, Tajpur Road, Ludhiana</p>
             </div>
           </div>
           <div className="d-flex">
@@ -71,7 +71,7 @@ const Footer = () => {
             <h4 className="fa fa-phone-alt text-main"></h4>
             <div className="pl-3">
               <h5 className="text-white">Phone</h5>
-              <p>99889-99217</p>
+              <p>+91 99889-99217, +91 9988999218</p>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ function CollapsibleExample() {
       <Container>
         <Navbar.Brand>
           <Link href="/">
-            <img className="card-img-top mb-2 logoImg" src="/img/logo.jpeg" alt="logo" />
+            <img className="card-img-top mb-2 logoImg" src="/img/logo-1.jpeg" alt="logo" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
