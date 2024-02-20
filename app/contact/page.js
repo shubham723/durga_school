@@ -153,10 +153,13 @@ const Contact = () => {
                 </div>
               </div>
               <div className="d-flex">
+                <div>
                 <i
                   className="fa fa-envelope d-inline-flex align-items-center justify-content-center bg-main text-secondary rounded-circle"
                   style={{ width: "45px", height: "45px" }}
                 ></i>
+
+                </div>
                 <div className="pl-3">
                   <h5>Email</h5>
                   <p>durgamodelschoolludhiana@gmail.com</p>
