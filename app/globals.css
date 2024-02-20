@@ -9945,5 +9945,5 @@ a.text-dark:hover, a.text-dark:focus {
 
 .logoImg {
   height: 100px;
-  width: 65px;
+  width: 100px !important;
 }
