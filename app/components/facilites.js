@@ -10,7 +10,7 @@ const Facilites = () => {
     <div className="container-fluid pt-5">
       <div className="container pb-3">
         <div className="row">
-          <div className="col-lg-4 col-md-6 pb-1">
+          <div className="col-lg-4 col-md-6 pb-1 facilites-box">
             <div
               className="d-flex bg-light shadow-sm border-top rounded mb-4"
               style={{ padding: "30px" }}
@@ -29,7 +29,7 @@ const Facilites = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 pb-1">
+          <div className="col-lg-4 col-md-6 pb-1 facilites-box">
             <div
               className="d-flex bg-light shadow-sm border-top rounded mb-4"
               style={{ padding: "30px" }}
@@ -49,7 +49,7 @@ const Facilites = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 pb-1">
+          <div className="col-lg-4 col-md-6 pb-1 facilites-box">
             <div
               className="d-flex bg-light shadow-sm border-top rounded mb-4"
               style={{ padding: "30px" }}

@@ -1,16 +1,41 @@
+import { useEffect, useRef, useState } from "react";
+
 const Introduction = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(divRef.current);
+        }
+      },
+      {
+        threshold: 1, // Adjust this value based on when you want the animation to trigger
+      }
+    );
+
+    observer.observe(divRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="container-fluid py-5">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-5">
+      <div className="container" ref={divRef}>
+        <div className="row align-items-center" style={{ display: isVisible ? "flex" : "none" }}>
+          <div className={`col-lg-5 ${isVisible && 'introLeft'}`}>
             <img
               className="img-fluid rounded mb-5 mb-lg-0"
               src="/img/student-2.jpeg"
               alt=""
             />
           </div>
-          <div className="col-lg-7">
+          <div className={`col-lg-7 ${isVisible && 'introRight'}`}>
             <p className="section-title pr-5">
               <span className="pr-2">Learn About Us</span>
             </p>

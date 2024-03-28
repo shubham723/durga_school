@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className="container-fluid bg-main px-0 px-md-5 mb-5">
       <div className="row align-items-center px-3 bannerImg">
-        <div className="col-lg-6 cold-md-12 text-center text-lg-left">
+        <div className="col-lg-6 cold-md-12 text-center text-lg-left bannerLeft">
           <h4 className="text-white mb-4 mt-5 mt-lg-0">Durga Model School Ludhiana</h4>
           <h1 className="display-3 font-weight-bold text-white">
             New Approach to Kids Education
@@ -20,7 +20,7 @@ const Banner = () => {
             Learn More
           </Link>
         </div>
-        <div className="col-lg-6 col-md-12 text-center text-lg-right">
+        <div className="col-lg-6 col-md-12 text-center text-lg-right bannerRight">
           <img className="img-fluid mt-5" src="img/header.png" alt="" />
         </div>
       </div>

@@ -8,17 +8,39 @@ import Introduction from "./introduction";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import Spinner from "react-bootstrap/Spinner";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
 const Homepage = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
+  const divRef = useRef(null);
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(divRef.current);
+        }
+      },
+      {
+        threshold: 0.1, // Adjust this value based on when you want the animation to trigger
+      }
+    );
+
+    observer.observe(divRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const onSubmit = async (data) => {
     setLoading(true);
@@ -50,8 +72,8 @@ const Homepage = () => {
             <h1 className="mb-4"> Welcome to Our Dynamic Learning Community</h1>
           </div>
           <div className="row">
-            <div className="col-lg-4 mb-5">
-              <div className="card border-0 bg-light shadow-sm pb-2">
+            <div className="col-lg-4 mb-5 excellence-box">
+              <div className="card border-0 bg-light shadow-sm pb-2 class">
                 <img
                   className="card-img-top mb-2"
                   src="/img/student-7.jpeg"
@@ -106,8 +128,8 @@ const Homepage = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 mb-5">
-              <div className="card border-0 bg-light shadow-sm pb-2">
+            <div className="col-lg-4 mb-5 excellence-box">
+              <div className="card border-0 bg-light shadow-sm pb-2 class">
                 <img
                   className="card-img-top mb-2"
                   src="/img/student-9.jpeg"
@@ -163,8 +185,8 @@ const Homepage = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 mb-5">
-              <div className="card border-0 bg-light shadow-sm pb-2">
+            <div className="col-lg-4 mb-5 excellence-box">
+              <div className="card border-0 bg-light shadow-sm pb-2 class">
                 <img
                   className="card-img-top mb-2"
                   src="/img/student-8.jpeg"
@@ -198,9 +220,9 @@ const Homepage = () => {
 
       {/* Contact */}
       <div className="container-fluid py-5">
-        <div className="container">
+        <div className="container" ref={divRef}>
           <div className="row align-items-center">
-            <div className="col-lg-7 mb-5 mb-lg-0">
+            <div className={`col-lg-7 mb-5 mb-lg-0 ${isVisible && 'introLeft'}`}>
               <p className="section-title pr-5">
                 <span className="pr-2">Book A Seat</span>
               </p>
@@ -231,7 +253,7 @@ const Homepage = () => {
                 Book Now
               </a>
             </div>
-            <div className="col-lg-5">
+            <div className={`col-lg-5 ${isVisible && 'introRight'}`}>
               <div className="card border-0">
                 <div className="card-header bg-sec text-center p-4">
                   <h1 className="text-white m-0">Book A Seat</h1>

@@ -182,8 +182,8 @@ const Contact = () => {
                 ></i>
                 <div className="pl-3">
                   <h5>Opening Hours</h5>
-                  <strong>Sunday - Friday:</strong>
-                  <p className="m-0">08:00 AM - 05:00 PM</p>
+                  <strong>Monday - Friday:</strong>
+                  <p className="m-0">08:00 AM - 02:00 PM</p>
                 </div>
               </div>
             </div>
